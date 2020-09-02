@@ -53,10 +53,7 @@ export class VendorList extends Component {
 
         return (
             <div>
-                <div className="d-flex">
-                    <h2>Vendors</h2>
-                    <Button variant="primary">Add</Button>
-                </div>
+                <h3>Vendors</h3>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
@@ -65,7 +62,7 @@ export class VendorList extends Component {
                             <th>Address</th>
                             <th>Contact</th>
                             <th>Pan number</th>
-                            <th></th>
+                            <th><Button variant="primary" size="sm">Add</Button></th>
                         </tr>
                     </thead>
                     <tbody>{vendorListRow}</tbody>
