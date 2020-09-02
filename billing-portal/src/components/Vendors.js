@@ -20,7 +20,7 @@ import { Table, Button } from 'react-bootstrap'
 
 
 
-export class Vendor extends Component {
+export class VendorList extends Component {
 
     render() {
 
@@ -75,4 +75,4 @@ export class Vendor extends Component {
     }
 }
 
-export default Vendor
+export default VendorList

@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Home from './Pages/Home'
-import Vendor from './Vendor'
+import Home from './pages/Home'
+import Vendor from './pages/Vendor'
 import Bills, {PanBills} from './Bills'
 
 const Routes = () => {

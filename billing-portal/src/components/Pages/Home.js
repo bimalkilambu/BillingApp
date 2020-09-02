@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Vendor from '../Vendor';
+import VendorList from '../Vendors';
 import { PendingBills } from '../Bills';
 
 
@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <div>
             <PendingBills />
-            <Vendor />
+            <VendorList />
         </div>
     )
 }
