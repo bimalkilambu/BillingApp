@@ -3,7 +3,7 @@ import VendorList from '../Vendors'
 
 function Vendor() {
     return (
-        <div>
+        <div  className="col-6">
             <VendorList />
         </div>
     )

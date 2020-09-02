@@ -33,10 +33,10 @@ export default class Bills extends Component {
             return (
                 <div className="">
                     <div>
-                    <div className="buttonBar m-4">
-                        <button class="btn btn-info" className="ml-2" > Create Bill</button>
-                        <button class="btn btn-warning" className="ml-2"> View Pending Bills</button>
-                    </div>
+                        <div className="buttonBar m-4">
+                            <button class="btn btn-info" className="ml-2" > Create Bill</button>
+                            <button class="btn btn-warning" className="ml-2"> View Pending Bills</button>
+                        </div>
                     </div>
                     <div className="clearfix"></div>
 
@@ -62,7 +62,7 @@ export default class Bills extends Component {
 
                         </div>
                     </div>
-                    
+
 
                     <div className="col-6">
                         <Table striped bordered hover>
@@ -71,7 +71,7 @@ export default class Bills extends Component {
                                     <th>Bill no.</th>
                                     <th>Bill date</th>
                                     <th>Vendor name</th>
-                                    <th>Bill Amount</th>
+                                    <th>Bill amt.</th>
                                     <th>#</th>
                                 </tr>
                             </thead>
@@ -140,7 +140,7 @@ class PendingBills extends Component {
                 <tbody>
                     {pendingListRows}
                     <tr>
-                        <td colSpan="5" align="right"><strong>Total Pending Amount</strong> </td>
+                        <td colSpan="5" align="right"><strong>Total Pending amt.</strong> </td>
                         <td colSpan="2">{sumValue()}</td>
                     </tr>
                 </tbody>
@@ -159,17 +159,17 @@ class PendingBills extends Component {
 
         const PendingBillRecords = () => {
             return (
-                <div className="col-8">
-                    <h2>Pending Bills</h2>
+                <div>
+                    <h3>Pending bills</h3>
                     <Table striped bordered hover>
                         <thead>
                             <tr>
                                 <th>Bill no.</th>
                                 <th>Bill date</th>
                                 <th>Vendor name</th>
-                                <th>Bill Amount</th>
-                                <th>Paid Amount</th>
-                                <th>Pending Amount</th>
+                                <th>Bill amt.</th>
+                                <th>Paid amt.</th>
+                                <th>Pending amt.</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -201,4 +201,42 @@ const PanBills = () => {
     )
 }
 
-export { PendingBills, PanBills}
+const BillSummary = () => {
+    return (
+        <div>
+            <h3> Fiscal year: 2077/2078</h3>
+            <div className="card bg-light mb-3">
+                <div className="card-header"><b>General bill summary</b></div>
+                <div className="card-body">
+                    <div className="card-info">
+                        Bill count: 12 <br />
+                        Total bill amount: Rs. 1120890 <br />
+                        Pending bill amount: Rs. 1020890 <br />
+                    </div>
+                </div>
+            </div>
+
+            <div className="card bg-light mb-3">
+                <div className="card-header"><b> Bimal store</b></div>
+                <div className="card-body">
+                    <div className="card-info">
+                        Pan bill count: 12 <br />
+                        Total transaction amt.: Rs. 1120890 <br />
+                    </div>
+                </div>
+            </div>
+
+            <div className="card bg-light mb-3">
+                <div className="card-header"> <b>The Ratna swori store</b></div>
+                <div className="card-body">
+                    <div className="card-info">
+                        Pan bill count: 12 <br />
+                        Total transaction amt. : Rs. 1120890 <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export { PendingBills, PanBills, BillSummary }
