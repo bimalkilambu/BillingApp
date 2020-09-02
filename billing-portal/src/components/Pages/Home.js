@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Vendor from '../vendor/Vendor';
-import { PendingBills } from '../Pages/Bills';
+import Vendor from '../Vendor';
+import { PendingBills } from '../Bills';
 
 
 const Home = () => {

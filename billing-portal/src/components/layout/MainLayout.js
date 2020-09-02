@@ -1,6 +1,6 @@
 import React from 'react'
-import Navigation from '../navigation/Navigation'
-import Routes from '../routes/Routes'
+import Navigation from '../Navigation'
+import Routes from '../Routes'
 
 const MainLayout = () => {
     return (

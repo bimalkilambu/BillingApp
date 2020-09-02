@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Table } from 'react-bootstrap'
-import PaymentModal from '../modal/PaymentModal';
+import PaymentModal from './modal/PaymentModal';
 
 export default class Bills extends Component {
     render() {
