@@ -2,6 +2,42 @@ import React, { Component } from 'react'
 import { Table } from 'react-bootstrap'
 import PaymentModal from './modal/PaymentModal';
 
+const SearchSection = () => {
+    return(
+        <div className="form-inline">
+             <div className="form-group mb-3">
+                 <div className="d-flex">
+                    <label for="inputPassword" className="col-sm-2 col-form-label">Password</label>
+                    <div className="col-sm-10">
+                     <input type="password" className="form-control" id="inputPassword" placeholder="Password"/>
+                    </div>
+                 </div>
+                 <div className="d-flex">
+                    <label for="inputPassword" className="col-sm-2 col-form-label">Password</label>
+                    <div className="col-sm-10">
+                      <input type="password" className="form-control" id="inputPassword" placeholder="Password"/>
+                    </div>
+                 </div>
+            </div>
+            <div className="form-group">
+                <div className="d-flex">
+                        <label for="inputPassword" className="col-sm-2 col-form-label">Password</label>
+                        <div className="col-sm-10">
+                        <input type="password" className="form-control" id="inputPassword" placeholder="Password"/>
+                        </div>
+                    </div>
+                 <div className="form-check d-flex">
+                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                    <label className="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+            </div>
+            <div className="ml-4">
+            <button type="submit" className="btn btn-primary mb-2">Confirm identity</button>
+            </div>
+        </div>
+    )
+}
+
 export default class Bills extends Component {
     render() {
 
@@ -88,6 +124,10 @@ export default class Bills extends Component {
 
         return (
             <div>
+                <div className="col-6">
+                    <SearchSection />
+                </div>
+                
                 < BillRecords />
             </div>
         )
