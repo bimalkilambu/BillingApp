@@ -10,7 +10,6 @@ function Navigation() {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                     <Nav.Link href="/" >Home</Nav.Link>
-                    <Nav.Link href="/vendor">Vendor</Nav.Link>
                     <NavDropdown title="Bills" id="basic-nav-dropdown">
                         <NavDropdown.Item href="/bills">Normal Bills</NavDropdown.Item>
                         <NavDropdown.Item href="/panbills">Pan Bills</NavDropdown.Item>

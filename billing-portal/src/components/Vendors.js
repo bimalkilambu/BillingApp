@@ -36,12 +36,71 @@ export class VendorList extends Component {
             VendorLocation: "Chundevi",
             ContactNumber: 9876543,
             PanNumber: ""
+        }, {
+            VendorId: 3,
+            VendorName: "Kanchha Sahu",
+            VendorLocation: "Chundevi",
+            ContactNumber: 9876543,
+            PanNumber: ""
+        }, {
+            VendorId: 4,
+            VendorName: "Kanchha Sahu",
+            VendorLocation: "Chundevi",
+            ContactNumber: 9876543,
+            PanNumber: ""
+        }, {
+            VendorId: 5,
+            VendorName: "Kanchha Sahu",
+            VendorLocation: "Chundevi",
+            ContactNumber: 9876543,
+            PanNumber: ""
+        }, {
+            VendorId: 6,
+            VendorName: "Kanchha Sahu",
+            VendorLocation: "Chundevi",
+            ContactNumber: 9876543,
+            PanNumber: ""
+        }, {
+            VendorId: 7,
+            VendorName: "Kanchha Sahu",
+            VendorLocation: "Chundevi",
+            ContactNumber: 9876543,
+            PanNumber: ""
+        }, {
+            VendorId: 8,
+            VendorName: "Kanchha Sahu",
+            VendorLocation: "Chundevi",
+            ContactNumber: 9876543,
+            PanNumber: ""
+        }, {
+            VendorId: 9,
+            VendorName: "Kanchha Sahu",
+            VendorLocation: "Chundevi",
+            ContactNumber: 9876543,
+            PanNumber: ""
+        }, {
+            VendorId: 10,
+            VendorName: "Kanchha Sahu",
+            VendorLocation: "Chundevi",
+            ContactNumber: 9876543,
+            PanNumber: ""
+        }, {
+            VendorId: 11,
+            VendorName: "Kanchha Sahu",
+            VendorLocation: "Chundevi",
+            ContactNumber: 9876543,
+            PanNumber: ""
+        }, {
+            VendorId: 12,
+            VendorName: "Kanchha Sahu",
+            VendorLocation: "Chundevi",
+            ContactNumber: 9876543,
+            PanNumber: ""
         }]
 
         const vendorListRow = vendorList.map(vendor => {
             return (
                 <tr key={vendor.VendorId}>
-                    <td>{vendor.VendorId}</td>
                     <td>{vendor.VendorName}</td>
                     <td>{vendor.VendorLocation}</td>
                     <td>{vendor.ContactNumber}</td>
@@ -52,22 +111,18 @@ export class VendorList extends Component {
         })
 
         return (
-            <div>
-                <h3>Vendors</h3>
-                <Table striped bordered hover>
-                    <thead>
-                        <tr>
-                            <th>S.N</th>
-                            <th>Vendor name</th>
-                            <th>Address</th>
-                            <th>Contact</th>
-                            <th>Pan number</th>
-                            <th><Button variant="primary" size="sm">Add</Button></th>
-                        </tr>
-                    </thead>
-                    <tbody>{vendorListRow}</tbody>
-                </Table>
-            </div>
+            <Table striped bordered hover>
+                <thead>
+                    <tr>
+                        <th>Vendor name</th>
+                        <th>Address</th>
+                        <th>Contact</th>
+                        <th>Pan number</th>
+                        <th><Button variant="primary" size="sm">Add</Button></th>
+                    </tr>
+                </thead>
+                <tbody>{vendorListRow}</tbody>
+            </Table>
         )
     }
 }

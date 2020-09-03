@@ -81,3 +81,9 @@ body {
 .card-info{
     text-align: left;
 }
+
+.fix-table-header          { overflow-y: auto; height: 300px; }
+.fix-table-header thead th { position: sticky; top: 0; }
+
+th, td { padding: 8px 16px; }
+th     { background:#eee; }
