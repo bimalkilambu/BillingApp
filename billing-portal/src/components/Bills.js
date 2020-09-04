@@ -3,36 +3,40 @@ import { Table } from 'react-bootstrap'
 import PaymentModal from './modal/PaymentModal';
 
 const SearchSection = () => {
-    return(
+    return (
         <div className="form-inline">
-             <div className="form-group mb-3">
-                 <div className="d-flex">
-                    <label for="inputPassword" className="col-sm-2 col-form-label">Password</label>
+            <div className="form-group mb-3">
+                <div className="d-flex">
+                    <label htmlFor="inputFrom" className="col-sm-2 col-form-label">From</label>
                     <div className="col-sm-10">
-                     <input type="password" className="form-control" id="inputPassword" placeholder="Password"/>
+                        <input type="text" className="form-control" id="inputFrom" placeholder="From" />
                     </div>
-                 </div>
-                 <div className="d-flex">
-                    <label for="inputPassword" className="col-sm-2 col-form-label">Password</label>
+                </div>
+                <div className="d-flex">
+                    <label htmlFor="inputTo" className="col-sm-2 col-form-label">To</label>
                     <div className="col-sm-10">
-                      <input type="password" className="form-control" id="inputPassword" placeholder="Password"/>
+                        <input type="text" className="form-control" id="inputTo" placeholder="To" />
                     </div>
-                 </div>
+                </div>
             </div>
             <div className="form-group">
                 <div className="d-flex">
-                        <label for="inputPassword" className="col-sm-2 col-form-label">Password</label>
-                        <div className="col-sm-10">
-                        <input type="password" className="form-control" id="inputPassword" placeholder="Password"/>
-                        </div>
+                    <label htmlFor="inputVendor" className="col-sm-2 col-form-label">Vendor</label>
+                    <div className="col-sm-10">
+                        <input type="text" className="form-control" id="inputVendor" placeholder="Vendor" />
                     </div>
-                 <div className="form-check d-flex">
+                </div>
+                <div className="form-check d-flex">
                     <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                    <label className="form-check-label" for="exampleCheck1">Check me out</label>
+                    <label className="form-check-label" htmlFor="exampleCheck1">General Bill</label>
+                </div>
+                <div className="form-check d-flex ml-3">
+                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                    <label className="form-check-label" htmlFor="exampleCheck1">Pan Bill</label>
                 </div>
             </div>
-            <div className="ml-4">
-            <button type="submit" className="btn btn-primary mb-2">Confirm identity</button>
+            <div className="ml-3">
+                <button type="submit" className="btn btn-primary mb-2">Search</button>
             </div>
         </div>
     )
@@ -67,56 +71,24 @@ export default class Bills extends Component {
 
         const BillRecords = () => {
             return (
-                <div className="">
-                    <div>
-                        <div className="buttonBar m-4">
-                            <button class="btn btn-info" className="ml-2" > Create Bill</button>
-                            <button class="btn btn-warning" className="ml-2"> View Pending Bills</button>
+                <div className="mt-4">
+                    <div className="">
+                        <div className="box p-4">
+                            <Table striped bordered hover>
+                                <thead>
+                                    <tr>
+                                        <th>Bill no.</th>
+                                        <th>Bill date</th>
+                                        <th>Vendor name</th>
+                                        <th>Bill amt.</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {billListRows}
+                                </tbody>
+                            </Table>
                         </div>
-                    </div>
-                    <div className="clearfix"></div>
-
-                    <div className="mb-3">
-                        <div className="d-flex">
-                            <div className="ml-2">
-                                <label>From</label>
-                                <input type="text" />
-                            </div>
-                            <div className="ml-2">
-                                <label>To</label>
-                                <input type="text" />
-                            </div>
-                            <div className="ml-2">
-                                <label>Vendor</label>
-                                <input type="text" />
-                            </div>
-                            <div className="ml-2">
-                                <button class="btn btn-info" id="create"> Search</button>
-                            </div>
-                        </div>
-                        <div>
-
-                        </div>
-                    </div>
-
-
-                    <div className="col-6">
-                        <Table striped bordered hover>
-                            <thead>
-                                <tr>
-                                    <th>Bill no.</th>
-                                    <th>Bill date</th>
-                                    <th>Vendor name</th>
-                                    <th>Bill amt.</th>
-                                    <th>#</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {billListRows}
-                            </tbody>
-
-
-                        </Table>
                     </div>
                 </div>
             )
@@ -124,11 +96,22 @@ export default class Bills extends Component {
 
         return (
             <div>
-                <div className="col-6">
-                    <SearchSection />
+                <div className="row col-12">
+                    <div className="mx-auto">
+                        <div className="box p-3">
+                            <SearchSection />
+                        </div>
+                    </div>
+
+                    <div className="col-6">
+                        <h3>General Bills</h3>
+                        < BillRecords />
+                    </div>
+                    <div className="col-6">
+                        <h3>Pan Bills</h3>
+                        < BillRecords />
+                    </div>
                 </div>
-                
-                < BillRecords />
             </div>
         )
     }
