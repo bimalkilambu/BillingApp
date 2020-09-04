@@ -18,8 +18,6 @@ const SearchSection = () => {
                         <input type="text" className="form-control" id="inputTo" placeholder="To" />
                     </div>
                 </div>
-            </div>
-            <div className="form-group">
                 <div className="d-flex">
                     <label htmlFor="inputVendor" className="col-sm-2 col-form-label">Vendor</label>
                     <div className="col-sm-10">
@@ -34,9 +32,9 @@ const SearchSection = () => {
                     <input type="checkbox" className="form-check-input" id="exampleCheck1" />
                     <label className="form-check-label" htmlFor="exampleCheck1">Pan Bill</label>
                 </div>
-            </div>
-            <div className="ml-3">
-                <button type="submit" className="btn btn-primary mb-2">Search</button>
+                <div className="ml-3">
+                    <button type="submit" className="btn btn-primary mb-2">Search</button>
+                </div>
             </div>
         </div>
     )
